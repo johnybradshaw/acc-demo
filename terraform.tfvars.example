@@ -1,0 +1,40 @@
+linode_config = {
+  email = "" // Linode account email address
+  api_token = "" // Linode API token
+  region = "" // Linode region to deploy to (should match lke_cluster)
+  secret_key = "" // Secret key for DDNS
+  tags        = ["cloud-day", "wordpress"]
+}
+
+dns = {  // DNS settings 
+  ddns = ""  // DDNS domain name for the application
+  ddns_secure = true // DDNS secure domain name for the application
+}
+
+lke_cluster = {
+  name        = "lke-tf-par"  // Name of your LKE cluster
+  region      = "fr-par"  // Region where your LKE cluster will be deployed
+  k8s_version = "1.28"  // Kubernetes version for your LKE cluster
+  tags        = ["dev"]
+  high_availability = true // Enable high availability for your LKE cluster
+  node_pools  = [  // Node pools configuration
+    {
+      type        = "g7-highmem-1"  // Type of nodes in the first pool
+      count       = 3  // Number of nodes in the first pool
+      autoscaler = {  // Enable autoscaling for the first pool
+        min_nodes         = 3  // Minimum number of nodes in the first pool
+        max_nodes         = 5  // Maximum number of nodes in the first pool
+        }
+    },
+    # {
+    #   type        = "g6-standard-2"  // Type of nodes in the second pool
+    #   count       = 3  // Number of nodes in the second pool
+    #   autoscaler = {  // Disable autoscaling for the first pool
+    #     min_nodes         = 3  // Minimum number of nodes in the first pool
+    #     max_nodes         = 7  // Maximum number of nodes in the first pool
+    #   }
+    # }
+  ]
+}
+
+production = true  // Enable production mode for your application

@@ -27,8 +27,21 @@ override.tf.json
 # !example_override.tf
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
-# example: *tfplan*
+*tfplan*
+*.out
+plan.json
 
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Ignore Visual Studio Code settings
+**/.vscode/*
+
+# Ignore custom directories
+**/scratch/
+**/*.venv
+**/*.env
+**/ddns/ddns.paw
+ddns/.terraform
+manual
