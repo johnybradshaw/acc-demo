@@ -32,11 +32,11 @@ module "lke-helm" {
     production = true # Pass the production flag to the module
 
     providers = {
-        linode.default = linode.default
-        helm.default = helm.default
-        kubernetes.default = kubernetes.default
-        kubectl.default = kubectl.default
-        random.default = random.default
+        linode = linode.default
+        helm = helm.default
+        kubernetes = kubernetes.default
+        kubectl = kubectl.default
+        random = random.default
     }
 
 }
