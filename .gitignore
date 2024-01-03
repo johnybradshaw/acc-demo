@@ -45,3 +45,4 @@ terraform.rc
 **/ddns/ddns.paw
 ddns/.terraform
 manual
+**/.DS_Store
