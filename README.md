@@ -81,8 +81,6 @@ Type:
 
 ```hcl
 object({
-      # domain    = string         // Domain name for the application
-      # soa_email = string         // SOA email address for the domain
       ddns      = string         // DDNS hostname
       ddns_secure = bool         // Use HTTPS for DDNS service
     })
