@@ -1,7 +1,7 @@
 linode_config = {
   email = "" // Linode account email address
   api_token = "" // Linode API token
-  region = "" // Linode region to deploy to (should match lke_cluster)
+  region = "fr-par" // Linode region to deploy to (should match lke_cluster)
   secret_key = "" // Secret key for DDNS
   tags        = ["cloud-day", "wordpress"]
 }
