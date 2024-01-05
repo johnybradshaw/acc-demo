@@ -77,7 +77,17 @@ provider "kubernetes" {
 }
 
 provider "kubectl" {
-  alias = "default"
+    alias = "default"
+
+    host  = local.kube_config_map.clusters[0].cluster.server
+    token = local.user_token
+
+    cluster_ca_certificate = base64decode(
+        local.kube_config_map.clusters[0].cluster["certificate-authority-data"]
+    )
+
+    load_config_file = false # Disables local loading of the KUBECONFIG
+    apply_retry_count = 15 # Allows kubernetes commands to be retried
 }
 
 provider "random" {

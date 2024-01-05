@@ -46,3 +46,4 @@ terraform.rc
 ddns/.terraform
 manual
 **/.DS_Store
+tf.log
