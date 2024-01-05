@@ -37,7 +37,7 @@ module "lke-helm" {
     linode_config = var.linode_config # Pass the Linode configuration to the module
     lke_cluster_id = module.lke.cluster_id # Pass the LKE cluster configuration to the module
     dns = var.dns # Pass the DNS configuration to the module
-    production = true # Pass the production flag to the module
+    production = var.production # Pass the production flag to the module
 
     providers = {
         linode = linode.default
