@@ -2,10 +2,10 @@
 
 A simple demo to build an app on the Akamai Connected Cloud. 
 
-**Note** When cloning this repo you must either run:
+**Note** When cloning this repo you must either add the `--recurse-submodules` flag e.g.:
 
 ```bash
-git clone --recurse-submodules https://github.com/johnybradshaw/acc-demo.git
+git clone --recurse-submodules https://github.com/johnybradshaw/acc-demo.git .\acc-demo
 ```
 
 or from within the directory after a standard clone:
