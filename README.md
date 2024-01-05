@@ -1,6 +1,18 @@
 # acc-demo
 
-A simple demo to build an app on the Akamai Connected Cloud.
+A simple demo to build an app on the Akamai Connected Cloud. 
+
+**Note** When cloning this repo you must either run:
+
+```bash
+git clone --recurse-submodules https://github.com/johnybradshaw/acc-demo.git
+```
+
+or from within the directory after a standard clone:
+
+```bash
+git submodule update --init
+```
 
 ## What does this workshop do?
 
