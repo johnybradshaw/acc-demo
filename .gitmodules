@@ -1,9 +1,12 @@
 [submodule "modules/lke"]
 	path = modules/lke
 	url = https://github.com/johnybradshaw/acc-lke
+	branch = main
 [submodule "modules/lke-networking"]
 	path = modules/lke-networking
 	url = https://github.com/johnybradshaw/acc-lke-networking.git
+	branch = main
 [submodule "modules/lke-helm"]
 	path = modules/lke-helm
 	url = https://github.com/johnybradshaw/acc-lke-helm.git
+	branch = main
