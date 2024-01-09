@@ -30,3 +30,5 @@ lke_cluster = {
 }
 
 production = true  // Enable production mode for your application
+
+subdomain = "mydomain" // Subdomain to configure for DDNS

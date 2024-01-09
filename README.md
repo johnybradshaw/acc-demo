@@ -178,6 +178,12 @@ object({
   })
 ```
 
+##### <a name="input_subdomain"></a> [subdomain](#input_subdomain)
+
+Description: Subdomain for the Wordpress site
+
+Type: `string`
+
 #### Optional Inputs
 
 The following input variables are optional (have default values):
@@ -276,6 +282,7 @@ lke_cluster = {
 
 production = true  // Enable production mode for your application
 
+subdomain = "mydomain" // Subdomain to configure for DDNS
 ```
 
 ### Step 2
@@ -308,7 +315,7 @@ cluster_link = "https://cloud.linode.com/kubernetes/clusters/123456/summary"
 lke_firewall_url = "https://cloud.linode.com/firewalls/123456"
 wordpressAdmin = "https://username.ddns.domain.name/wp-login.php"
 wordpressPassword = <sensitive>
-wordpressURL = "https://username.ddns.domain.name"
+wordpressURL = "https://subdomain.ddns.domain.name"
 wordpressUsername = "username"
 ```
 
