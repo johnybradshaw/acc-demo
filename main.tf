@@ -14,6 +14,7 @@ module "lke" {
 
     providers = {
         linode = linode.default
+        random = random.default
     }
 }
 
@@ -38,6 +39,7 @@ module "lke-helm" {
     lke_cluster_id = module.lke.cluster_id # Pass the LKE cluster configuration to the module
     dns = var.dns # Pass the DNS configuration to the module
     production = var.production # Pass the production flag to the module
+    subdomain = var.subdomain # Pass the subdomain to the module
 
     providers = {
         linode = linode.default

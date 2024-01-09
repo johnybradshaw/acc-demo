@@ -36,7 +36,7 @@ output "wordpressAdmin" {
     description = "Wordpress Admin URL"
 }
 output "wordpressUsername" {
-    value = data.linode_profile.me.username
+    value = module.lke-helm.wordpressUsername
     description = "Wordpress Username"
 }
 output "wordpressPassword" {

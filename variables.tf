@@ -45,3 +45,13 @@ variable "production" {
   type = bool
   default = false
 }
+
+variable "subdomain" {
+  description = "Subdomain for the Wordpress site"
+  type = string
+
+  validation {
+    condition     = can(regex("^[a-zA-Z]+$", var.subdomain))
+    error_message = "The subdomain must only contain letters."
+  }
+}
